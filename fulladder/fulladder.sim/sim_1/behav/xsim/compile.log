@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nguyj/Documents/Coding Projects/fulladder/fulladder.srcs/sources_1/new/fulladder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'FullAdder'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nguyj/Documents/Coding Projects/fulladder/fulladder.srcs/sim_1/new/fulladdersim.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'FullAdderSim'

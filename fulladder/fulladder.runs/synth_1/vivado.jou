@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Jan 27 14:36:18 2022
+# Process ID: 6152
+# Current directory: C:/Users/nguyj/Documents/Coding Projects/fulladder/fulladder.runs/synth_1
+# Command line: vivado.exe -log FullAdder.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source FullAdder.tcl
+# Log file: C:/Users/nguyj/Documents/Coding Projects/fulladder/fulladder.runs/synth_1/FullAdder.vds
+# Journal file: C:/Users/nguyj/Documents/Coding Projects/fulladder/fulladder.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source FullAdder.tcl -notrace
