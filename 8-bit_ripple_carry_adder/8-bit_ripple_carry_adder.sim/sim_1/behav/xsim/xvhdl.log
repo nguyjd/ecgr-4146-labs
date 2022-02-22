@@ -1,2 +1,8 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nguyj/Documents/Coding Projects/8-bit_ripple_carry_adder/8-bit_ripple_carry_adder.srcs/sim_1/new/ripplecarry_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nguyj/Documents/Coding Projects/ecgr-4146-labs/8-bit_ripple_carry_adder/8-bit_ripple_carry_adder.srcs/sources_1/new/fulladder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fulladder'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nguyj/Documents/Coding Projects/ecgr-4146-labs/8-bit_ripple_carry_adder/8-bit_ripple_carry_adder.srcs/sources_1/new/halfadder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'halfadder'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nguyj/Documents/Coding Projects/ecgr-4146-labs/8-bit_ripple_carry_adder/8-bit_ripple_carry_adder.srcs/sources_1/new/ripplecarryadder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ripplecarryadder'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nguyj/Documents/Coding Projects/ecgr-4146-labs/8-bit_ripple_carry_adder/8-bit_ripple_carry_adder.srcs/sim_1/new/ripplecarry_tb.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'ripplecarry_tb'
