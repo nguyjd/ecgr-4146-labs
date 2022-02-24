@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Tue Feb 22 20:30:16 2022
-# Process ID: 13668
+# Start of session at: Tue Feb 22 21:41:27 2022
+# Process ID: 2800
 # Current directory: F:/Coding Projects/VHDL/ecgr-4146-labs/binary-counter/binary-counter.runs/synth_1
 # Command line: vivado.exe -log m_counter.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source m_counter.tcl
 # Log file: F:/Coding Projects/VHDL/ecgr-4146-labs/binary-counter/binary-counter.runs/synth_1/m_counter.vds

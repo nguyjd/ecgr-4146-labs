@@ -2,8 +2,8 @@
 # Webtalk v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Thu Feb 24 12:29:43 2022
-# Process ID: 16324
+# Start of session at: Thu Feb 24 12:28:16 2022
+# Process ID: 13532
 # Current directory: F:/Coding Projects/VHDL/ecgr-4146-labs/binary-counter/binary-counter.sim/sim_1/behav/xsim
 # Command line: wbtcv.exe -mode batch -source F:/Coding Projects/VHDL/ecgr-4146-labs/binary-counter/binary-counter.sim/sim_1/behav/xsim/xsim.dir/m_counter_TB_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: F:/Coding Projects/VHDL/ecgr-4146-labs/binary-counter/binary-counter.sim/sim_1/behav/xsim/webtalk.log

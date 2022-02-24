@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Tue Feb 22 20:30:35 2022
+| Date         : Tue Feb 22 21:41:55 2022
 | Host         : DESKTOP-K6PHM3E running 64-bit major release  (build 9200)
 | Command      : report_utilization -file m_counter_utilization_synth.rpt -pb m_counter_utilization_synth.pb
 | Design       : m_counter
