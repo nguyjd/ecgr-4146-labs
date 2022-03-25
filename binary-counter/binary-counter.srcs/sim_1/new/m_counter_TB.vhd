@@ -34,7 +34,7 @@ begin
     
     end process;
     
-    diff_mods: process
+    test_vec: process
     begin
     
         m <= "0010";
@@ -54,7 +54,7 @@ begin
         wait for 500 ns;
         reset <= '1';
         
-        wait for 10 ns;
+        wait for 100 ns;
         reset <= '0';
         
     end process;

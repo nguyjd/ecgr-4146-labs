@@ -25,8 +25,6 @@ begin
     
     UUT : subset_m_counter port map (clk => clk, reset => reset, m => m, n => n, q => q);
     
-    m <= "1010";
-    
     clk_pulse: process
     begin
     
@@ -38,19 +36,29 @@ begin
     
     end process;
     
-    process
+    test_vec: process
     begin
-    
-        if (q = "1000") then
-            
-            reset <= '1';
-            wait for 20 ns;
-            reset <= '0';
         
-        end if;
+        -- 2 to 5
+        m <= "0110";
+        wait for 250 ns;
         
-        wait for 20 ns;
+        -- 8 to 12
+        n <= "1000";
+        m <= "1101";
+        wait;
     
+    end process;
+    
+    reset_count: process
+    begin
+        
+        wait for 500 ns;
+        reset <= '1';
+        
+        wait for 100 ns;
+        reset <= '0';
+        
     end process;
 
 
