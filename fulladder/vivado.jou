@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed Mar 30 21:55:11 2022
+# Process ID: 18508
+# Current directory: C:/Users/nguyj/Documents/Coding Projects/ecgr-4146-labs/fulladder
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21780 C:\Users\nguyj\Documents\Coding Projects\ecgr-4146-labs\fulladder\fulladder.xpr
+# Log file: C:/Users/nguyj/Documents/Coding Projects/ecgr-4146-labs/fulladder/vivado.log
+# Journal file: C:/Users/nguyj/Documents/Coding Projects/ecgr-4146-labs/fulladder\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/nguyj/Documents/Coding Projects/ecgr-4146-labs/fulladder/fulladder.xpr}
+update_compile_order -fileset sources_1

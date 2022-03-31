@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../manchester-encoding.srcs/sources_1/new/ManchesterEncoding.vhd" \
+"../../../../manchester-encoding.srcs/sim_1/new/ManchesterEncoding_TB.vhd" \
+
+# Do not sort compile order
+nosort
