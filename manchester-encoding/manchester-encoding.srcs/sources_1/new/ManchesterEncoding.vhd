@@ -3,7 +3,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
 entity ManchesterEncoding is
-    generic(WIDTH: integer := 8);
+    generic(WIDTH: positive := 8 );
     port(str_input: in std_logic_vector (WIDTH - 1 downto 0);  
          clk: in std_logic;  
          reset: in std_logic;
@@ -17,18 +17,18 @@ architecture Behavioral of ManchesterEncoding is
 type states is (idle, stop, s0, s1, s2, s3,
                 s4, s5 ,s6, s7);
 signal statereg, statenext: states;
-signal data_bit, str_output_next: std_logic := '0';
+signal data_bit, str_output_reg: std_logic := '0';
 begin
 
--- State Register / Output DFF
+-- State Register / Output DFF - Buffer
 process (clk, reset)
 begin
      if (reset = '1') then
         statereg <= idle;
-        str_output_next <= '0';
+        str_output_reg <= '0';
      elsif (clk'event and clk = '1') then
         statereg <= statenext;
-        str_output_next <= data_bit;
+        str_output_reg <= data_bit;
      end if;
 end process;
 
@@ -64,38 +64,19 @@ begin
 end process;
 
 -- Next Output Lookahead Logic
-process(statenext)
-begin
-    case statenext is
-        when idle =>
-            data_bit <= '0';
-        when stop =>
-            data_bit <= '0'; 
-        when s0 =>
-            data_bit <= str_input(7);
-        when s1 =>
-            data_bit <= str_input(6);
-        when s2 =>
-            data_bit <= str_input(5);
-        when s3 =>
-            data_bit <= str_input(4);
-        when s4 =>
-            data_bit <= str_input(3);
-        when s5 =>
-            data_bit <= str_input(2);
-        when s6 =>
-            data_bit <= str_input(1);
-        when s7 =>
-            data_bit <= str_input(0);
-    end case;
-end process;
-
+data_bit <= str_input(7) when (statenext = idle) else
+            str_input(6) when (statenext = s0) else
+            str_input(5) when (statenext = s1) else
+            str_input(4) when (statenext = s2) else
+            str_input(3) when (statenext = s3) else
+            str_input(2) when (statenext = s4) else
+            str_input(1) when (statenext = s5) else
+            str_input(0) when (statenext = s6) else
+            '0';
 
 -- Output Logic     
-str_output <=  (str_output_next xor clk) when (statenext = s0) or (statenext = s1)
-                                            or (statenext = s2) or (statenext = s3)
-                                            or (statenext = s4) or (statenext = s5)
-                                            or (statenext = s6) or (statenext = s7) 
+str_output <=  not (str_output_reg xor clk) when not (statenext = idle) 
+                                            and not (statenext = stop)
                                             else '0';
 
 end Behavioral;

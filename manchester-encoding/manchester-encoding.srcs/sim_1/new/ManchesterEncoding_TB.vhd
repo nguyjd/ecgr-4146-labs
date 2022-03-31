@@ -44,25 +44,32 @@ begin
     begin
         
         reset <= '1';
-        wait for 100 ns;
+        wait for 90 ns;
+        
         
         str_input <= "11000110";
+        wait for 10 ns;
+        
         reset <= '0';
         enable <= '1';
         wait for 200 ns;
         
         reset <= '1';
-        wait for 100 ns;
+        wait for 90 ns;
         
         str_input <= "00100100";
+        wait for 10 ns;
+        
         reset <= '0';
         enable <= '1';
         wait for 200 ns;
         
         reset <= '1';
-        wait for 100 ns;
+        wait for 90 ns;
         
         str_input <= "10110100";
+        wait for 10 ns;
+        
         reset <= '0';
         enable <= '1';
         wait for 200 ns;
