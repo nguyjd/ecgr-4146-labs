@@ -63,7 +63,7 @@ begin
     end case;
 end process;
 
--- Output Lookahead Logic
+-- Next Output Lookahead Logic
 process(statenext)
 begin
     case statenext is
@@ -72,33 +72,30 @@ begin
         when stop =>
             data_bit <= '0'; 
         when s0 =>
-            data_bit <= str_input(0);
-        when s1 =>
-            data_bit <= str_input(1);
-        when s2 =>
-            data_bit <= str_input(2);
-        when s3 =>
-            data_bit <= str_input(3);
-        when s4 =>
-            data_bit <= str_input(4);
-        when s5 =>
-            data_bit <= str_input(5);
-        when s6 =>
-            data_bit <= str_input(6);
-        when s7 =>
             data_bit <= str_input(7);
+        when s1 =>
+            data_bit <= str_input(6);
+        when s2 =>
+            data_bit <= str_input(5);
+        when s3 =>
+            data_bit <= str_input(4);
+        when s4 =>
+            data_bit <= str_input(3);
+        when s5 =>
+            data_bit <= str_input(2);
+        when s6 =>
+            data_bit <= str_input(1);
+        when s7 =>
+            data_bit <= str_input(0);
     end case;
 end process;
 
 
--- Output Logic     -- All the requirements to output zero 
-str_output <=  '0' when (statenext = idle or statenext = stop) 
-                    or (str_output_next = '1' and clk = '1')
-                    or (str_output_next = '0' and clk = '0') else
-                    
-                    -- All the requirements to output one
-                    '1' when (str_output_next = '1' and clk = '0')
-                    or (str_output_next = '0' and clk = '1') else
-                    '0';
+-- Output Logic     
+str_output <=  (str_output_next xor clk) when (statenext = s0) or (statenext = s1)
+                                            or (statenext = s2) or (statenext = s3)
+                                            or (statenext = s4) or (statenext = s5)
+                                            or (statenext = s6) or (statenext = s7) 
+                                            else '0';
 
 end Behavioral;
